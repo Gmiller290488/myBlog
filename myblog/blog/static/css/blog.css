@@ -1,14 +1,15 @@
 h1 a {
-    color: #FCA205;
+    color: #FFFFFF
     font-family: 'Lobster';
     }
+
 
 body {
     padding-left: 15px;
 
     }
-    .page-header {
-    background-color: #ff9400;
+.page-header {
+    background-color: #306bac;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -32,7 +33,7 @@ h1, h2, h3, h4 {
     color: #828282;
 }
 
-.save {
+.save{
     float: right;
 }
 
@@ -54,3 +55,4 @@ h1, h2, h3, h4 {
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
+
