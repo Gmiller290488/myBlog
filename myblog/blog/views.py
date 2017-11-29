@@ -4,7 +4,19 @@ from .models import Post, Comment
 from django.utils import timezone
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
+from pusher import Pusher
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
+pusher = Pusher(app_id=u'437140', key=u'8d5530f7a775b908af25', secret=u'0a28298c21031bff305b', cluster=u'eu')
+
+def chat(request):
+   return render(request, 'blog/chat.html');
+
+@csrf_exempt
+def broadcast(request):
+    pusher.trigger(u'a_channel', u'an_event', {u'name': request.POST['name'], u'message': request.POST['message']})
+    return HttpResponse("done");
 
 # Create your views here.
 def post_list(request):
