@@ -8,7 +8,7 @@ from pusher import Pusher
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
-pusher = Pusher(app_id=u'437140', key=u'8d5530f7a775b908af25', secret=u'0a28298c21031bff305b', cluster=u'eu')
+pusher = Pusher(app_id=u'', key=u'', secret=u'', cluster=u'eu')
 
 def chat(request):
    return render(request, 'blog/chat.html');
