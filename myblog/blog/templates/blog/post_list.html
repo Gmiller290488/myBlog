@@ -13,6 +13,7 @@
     <p>{{ post.text|safe|truncatewords:"50"|linebreaks }}</p>
     <a href="{% url 'post_detail' pk=post.pk %}">Read more...</a><br>
     <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+    <p class="tags">Tags: {{ post.tags.all|join:", " }}</p>
   </div>
   
 {% endfor %}
